@@ -1,5 +1,8 @@
-import { createEmployeesObject } from './11-createEmployeesObject';
-
-export default function createReportObject(employeesList) {
-
-}
+export function createReportObject(employeesList) {
+    return {
+      allEmployees: { ...employeesList },
+      getNumberOfDepartments: function (employees) {
+        return Object.keys(employees).length;
+      },
+    };
+  }
